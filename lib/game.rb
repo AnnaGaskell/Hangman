@@ -14,9 +14,9 @@ class Game
   end
 
   def play_game
-    intro if round.zero?
-    while @computer.lives.positive? && computer.word_guessed == false
-      load_game if round.zero?
+    intro if @round.zero?
+    while @computer.lives.positive? && @computer.word_guessed == false
+      load_game if @round.zero?
       @computer.display(@computer.lives)
       @computer.check_guess(player_input)
       @round += 1
@@ -37,8 +37,8 @@ class Game
 
   def win_lose
     if @computer.lives.zero?
-      puts "\n You lose! A man died because of you"
-      puts "The word was obviously #{@computer.word}!!\n\n"
+      puts "\nYou lose! The word was obviously #{@computer.word}!!"
+      puts "A man died because of you\n\n"
     else
       puts "You Win! A hero amongst gods\n\n"
     end

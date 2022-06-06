@@ -4,7 +4,8 @@ module HangmanDisplay
   -------------------------------------------------
       Welcome to Hangman.
       Spell your word correctly to save the man from his fate.
-      Press any key to continue...
+      --Hit Enter to resume a saved game otherwise --
+      Press any other key to start new...
     -------------------------------------------------
   INTRO
 

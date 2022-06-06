@@ -13,10 +13,9 @@ class Computer
   end
 
   def choose_word
-    contents = File.open('./5desk.txt', 'r', &:read)
-    contents_arr = contents.split(/\r\n/)
-    contents_arr.delete_if { |word| word.length < 5 || word.length > 12 }
-    contents_arr[rand(contents_arr.length)].downcase
+    word_list = IO.readlines('dictionary.txt')
+    word_list.each(&:strip!).select { |word| word.length.between?(5, 12) }
+    word_list[rand(0..word_list.length)]
   end
 
   def display(lives)
