@@ -14,3 +14,5 @@ There is a save functionality where, at the start of any turn, instead of making
 
 
 When the program first loads, there is an option that allows the player to open one of their saved games.
+
+[![Run on Repl.it](https://repl.it/badge/github/AnnaGaskell/Hangman)](https://repl.it/github/AnnaGaskell/Hangman)
